@@ -10,9 +10,13 @@ export const DynamicProfile: React.FC<IDynamicProfileProps> = ({}) => {
 
     return (
         <div style={{padding:'20px', backgroundColor: 'rgba(255,0,0,0.2)', margin: '20px 0'}}>
-            <small>Should show this section only if connected:</small>
-            <br/>
-            <b>Address:</b> {address}
+            {address && (
+                <>
+                    <small>Should show this section only if connected:</small>
+                    <br/>
+                    <b>Address:</b> {address}
+                </>
+            )}
         </div>
     );
 };
